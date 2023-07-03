@@ -1,0 +1,142 @@
+@import "normalize-scss/sass/_normalize.scss";
+@import 'tiny-slider/src/tiny-slider';
+
+body {
+  font-family: Merriweather, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(52, 48, 48);
+  margin: 0;
+  height: 100%;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+  margin: 0 0 19px 0;
+}
+
+header {
+  border-bottom: 1px solid #E1E1E1;
+  padding: 24px 0;
+}
+
+footer {
+  background-color: #ECEAEA;
+  padding: 37px 0;
+  margin-top: auto;
+}
+
+section {
+  padding-bottom: 150px;
+  flex: 1 0 auto;
+
+}
+
+.disabled {
+  z-index: 5;
+  opacity: 0.5;
+
+  .catalog-item__desc {
+    padding-bottom: 34px;
+
+  .desc__price {
+    margin-top: 33px;
+  }
+}
+
+  .btn {
+    display: none;
+  }
+}
+
+.active {
+  background-color: #5B3A32;
+}
+
+.btn {
+  background-color: #382e2b;
+  color: #F4F6F9;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 30px;
+  border: 1px solid transparent;
+  position: relative;
+  display: block;
+
+  &:hover {
+    background-color: #776763;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #5b3a32;
+  }
+}
+
+.btn__loading {
+  padding: 14px 9px 14px 32px;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    margin: auto 0;
+    width: 17px;
+    height: 17px;
+    background: url("../images/preloader.gif") no-repeat;
+    background-size: contain;
+  }
+}
+
+.InCart {
+  padding: 14px 9px 14px 32px;
+  background-color: #5b3a32;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    margin: auto 0;
+    width: 17px;
+    height: 17px;
+    background: url("../images/inCart.svg") no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 1255px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+
+  .disabled .catalog-item__desc {
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}

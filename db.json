@@ -1,0 +1,58 @@
+{
+  "products": [
+    { "id": "1",
+      "sold": false,
+      "image": "sandro_bottichely.png",
+      "sliderImages": [
+        { "id": "1_1", "img": "sandro_bottichely.png", "name": "sandro_1" },
+        { "id": "1_2", "img": "sandro_bottichely_2.png", "name": "sandro_2" },
+        { "id": "1_3", "img": "sandro_bottichely_3.png", "name": "sandro_3" }
+      ],
+      "name": "Рождение Венеры",
+      "author": "Сандро Боттичелли",
+      "sale": "2 000 000",
+      "price": "1 000 000",
+      "description": "Картина итальянского художника тосканской школы - Сандро Боттичелли. Представляет собой живопись темперой на холсте размером 172,5 × 278,5 см."
+    },
+    { "id": "2",
+      "sold": false,
+      "image": "leonardo_da_vinchi.png",
+      "sliderImages": [
+        { "id": "2_1", "img": "leonardo_da_vinchi.png", "name": "leonardo_1" },
+        { "id": "2_2", "img": "leonardo_da_vinchi_2.png", "name": "leonardo_2" },
+        { "id": "2_3", "img": "leonardo_da_vinchi_3.png", "name": "leonardo_3" }
+      ],
+      "name": "Тайная вечеря",
+      "author": "Леонардо да Винчи",
+      "price": "3 000 000",
+      "description": "монументальная роспись работы Леонардо да Винчи, изображающая сцену последней трапезы Христа со своими учениками."
+    },
+    { "id": "3",
+      "sold": false,
+      "image": "mikelangelo.png",
+      "sliderImages": [
+        { "id": "3_1", "img": "mikelangelo.png", "name": "mikelangelo_1" },
+        { "id": "3_2", "img": "mikelangelo_2.png", "name": "mikelangelo_2" },
+        { "id": "3_3", "img": "mikelangelo_3.png", "name": "mikelangelo_3" }
+      ],
+      "name": "Сотворение Адама",
+      "author": "Микеланджело",
+      "sale": "6 000 000",
+      "price": "5 000 000",
+      "description": "Фреска является четвёртой из девяти центральных композиций потолка Сикстинской капеллы, посвящённых девяти сюжетам книги Бытия."
+    },
+    { "id": "4",
+      "sold": true,
+      "image": "rembrandt.png",
+      "sliderImages": [
+        { "id": "4_1", "img": "rembrandt.png", "name": "rembrandt_1" },
+        { "id": "4_2", "img": "rembrandt_2.png", "name": "rembrandt_2" },
+        { "id": "4_3", "img": "rembrandt_3.png", "name": "rembrandt_3" }
+      ],
+      "name": "Урок анатомии",
+      "author": "Рембрандт",
+      "price": "Продана на аукционе",
+      "description": "Центральная фигура картины — доктор Николас Тульп, который показывает собравшимся устройство мускулатуры руки человека."
+    }
+  ]
+}
