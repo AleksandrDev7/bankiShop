@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .contacts {
   display: flex;
   flex-direction: row;
@@ -63,4 +64,5 @@ export default {
     margin-right: 20px;
   }
 }
+
 </style>

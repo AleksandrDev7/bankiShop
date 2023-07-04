@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import carouselItem from "@/components/carousel-item";
+
+import carouselItem from "@/components/carouselItem";
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
@@ -53,6 +54,7 @@ export default {
       }
     }
   },
+
   methods: {
     showNext() {
       this.$refs.carousel.next()

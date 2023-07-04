@@ -141,18 +141,12 @@ export default {
       }
     }
   }
-
 }
+
 @media screen and (max-width: 585px) {
   .popup {
     width: 70%;
     padding: 10px 20px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .popup {
-
   }
 }
 </style>

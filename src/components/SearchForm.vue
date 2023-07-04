@@ -1,7 +1,15 @@
 <template>
   <form class="v-searchForm"  @submit.prevent="" >
-    <input class="v-searchForm__input" type="text" placeholder="Поиск по названию картины" v-model="searchValue" @keyup.enter="search(searchValue)"  />
-    <button class="v-searchForm__button btn" type="button" @click="search(searchValue)">Найти</button>
+    <input class="v-searchForm__input"
+           type="text"
+           placeholder="Поиск по названию картины"
+           v-model="searchValue"
+           @keyup.enter="search(searchValue)"/>
+    <button class="v-searchForm__button btn"
+            type="button"
+            @click="search(searchValue)">
+      Найти
+    </button>
   </form>
 </template>
 
@@ -79,7 +87,4 @@ export default {
     display: none;
   }
 }
-
-
-
 </style>

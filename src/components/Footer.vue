@@ -23,10 +23,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .VFooter {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
+
 </style>

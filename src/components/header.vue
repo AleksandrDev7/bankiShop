@@ -34,7 +34,9 @@ export default {
       showNavBarVisible: false
     }
   },
+
   methods: {
+
     openBrgMenu() {
       this.showNavBarVisible = this.showNavBarVisible !== true;
       hideBodyOverflow();
@@ -43,17 +45,18 @@ export default {
         showBodyOverflow();
       }
     }
+
   }
 }
 </script>
 
 <style scoped>
+
 .VHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-
 }
+
 </style>

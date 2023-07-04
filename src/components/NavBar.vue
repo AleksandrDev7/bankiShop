@@ -1,11 +1,11 @@
 <template>
   <nav class="NavBar">
     <ul class="nav-list">
-      <li><a>Каталог</a></li>
-      <li><a>Доставка</a></li>
-      <li><a>Оплата</a></li>
-      <li><a>Контакты</a></li>
-      <li><a>О компании</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Доставка</a></li>
+      <li><a href="#">Оплата</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">О компании</a></li>
     </ul>
   </nav>
 </template>
@@ -47,7 +47,6 @@ export default {
   }
 }
 
-
 @media screen and (max-width: 1255px) {
   .NavBar {
     width: 45%;
@@ -85,7 +84,6 @@ export default {
         padding: 10px;
       }
     }
-
   }
 
   .show {

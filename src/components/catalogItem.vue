@@ -1,5 +1,6 @@
 <template>
 <div class="catalog-item" :key="product_data.id"  v-bind:class="{ 'disabled': product_data.sold }">
+
   <VPopup
       v-if="isPopupVisible"
       @closePopup="closePopup"
@@ -8,9 +9,11 @@
       :buyButton="buyButton"
       @AddBtnAction="addToCart"
   >
+
     <vCarousel
       :carousel_data="product_data.sliderImages"
     />
+
     <div class="catalog-item__desc popup_desc">
       <p class="popup_desc_text">{{product_data.description}}</p>
       <div class="desc__price">
@@ -21,6 +24,7 @@
       </div>
     </div>
   </VPopup>
+
   <img :src="require('../assets/images/' + product_data.image)"
        alt="img"
        @click="showPopupInfo">
@@ -53,8 +57,7 @@ import Vue from "vue";
 import VueAxios from "vue-axios";
 import {mapGetters} from "vuex";
 import VPopup from '@/components/popup';
-import vCarousel from '@/components/v-carousel';
-
+import vCarousel from '@/components/carousel';
 
 Vue.use(VueAxios, axios);
 
@@ -165,10 +168,7 @@ export default {
     },
 
     showPopupInfo() {
-      this.isPopupVisible = true;
-      if(this.product_data.sold) {
-        this.isPopupVisible = false;
-      }
+      this.isPopupVisible = !this.product_data.sold;
     },
 
     closePopup() {
@@ -239,7 +239,6 @@ export default {
           color: #343030;
         }
       }
-
     }
   }
 }
@@ -268,6 +267,5 @@ export default {
   .catalog-item {
     width: 80%;
   }
-
 }
 </style>

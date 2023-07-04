@@ -1,6 +1,7 @@
 <template>
   <div>
-    <img :src=" require('../assets/images/' + item_data.img) " alt="item_data.name">
+    <img :src=" require('../assets/images/' + item_data.img) "
+         alt="item_data.name">
   </div>
 </template>
 
@@ -21,6 +22,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 div {
   text-align: center;
   width: 100%;
@@ -31,4 +33,5 @@ div {
     height: 100%;
   }
 }
+
 </style>
