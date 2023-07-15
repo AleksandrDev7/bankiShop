@@ -122,13 +122,13 @@ export default {
 
     addToCart() {
       this.cartItem = JSON.parse(localStorage.getItem('cartItem'));
-      if (this.cartItem.length === 0) {
+      if (this.cartItem?.length === 0) {
         this.productInCart();
         this.savedProducts();
 
-      }  else if (this.cartItem.find(cartId => cartId === this.itemID)) {
+      }  else if (this.cartItem?.find(cartId => cartId === this.itemID)) {
 
-        this.cartItem = this.cartItem.filter(elem => elem !== this.itemID);
+        this.cartItem = this.cartItem?.filter(elem => elem !== this.itemID);
         this.productOutCart();
         this.savedProducts();
 
