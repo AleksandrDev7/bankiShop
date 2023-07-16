@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src=" require('../assets/images/' + item_data.img) "
+    <img :src=" require('/public/images/' + item_data.img) "
          alt="item_data.name">
   </div>
 </template>

@@ -6,9 +6,9 @@
 </div>
 </template>
 <script>
-import VHeader from "@/components/header";
-import VCatalog from "@/components/Catalog";
-import VFooter from "@/components/Footer";
+import VHeader from "@/components/header/header";
+import VCatalog from "@/components/catalog/catalog";
+import VFooter from "@/components/footer/footer";
 let documentBody = document.getElementsByTagName('body')[0];
 
 export const showBodyOverflow = () => {

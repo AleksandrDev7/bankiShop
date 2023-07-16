@@ -25,7 +25,7 @@
     </div>
   </VPopup>
 
-  <img :src="require('../assets/images/' + product_data.image)"
+  <img :src="require('/public/images/' + product_data.image)"
        alt="img"
        @click="showPopupInfo">
   <div class="catalog-item__desc">
@@ -56,8 +56,8 @@ import axios from "axios";
 import Vue from "vue";
 import VueAxios from "vue-axios";
 import {mapGetters} from "vuex";
-import VPopup from '@/components/popup';
-import vCarousel from '@/components/carousel';
+import VPopup from '@/components/popup/popup';
+import vCarousel from '@/components/carousel/carousel';
 
 Vue.use(VueAxios, axios);
 
@@ -86,7 +86,10 @@ export default {
       isPopupVisible: false,
       btnInCart: false,
       loading: false,
-      itemID: this.product_data.id
+      itemID: this.product_data.id,
+      call: true,
+      out: true,
+      in: false
     }
   },
 
@@ -98,11 +101,15 @@ export default {
   },
 
   mounted() {
-    if (localStorage.getItem('cartItem')) {
 
       try {
+
         this.cartItem = JSON.parse(localStorage.getItem('cartItem'));
         let storage = JSON.parse(localStorage.getItem('cartItem'));
+
+        if(this.cartItem === null) {
+          this.cartItem = [];
+        }
 
         storage.forEach((item) => {
           if(item === this.itemID) {
@@ -113,30 +120,27 @@ export default {
         });
 
       } catch (e) {
-        console.log(this.cartItem)
+        console.log(this.cartItem);
       }
-    }
+
   },
 
   methods: {
 
     addToCart() {
       this.cartItem = JSON.parse(localStorage.getItem('cartItem'));
-      if (this.cartItem?.length === 0) {
-        this.productInCart();
+      if (!this.cartItem?.length === null) {
+        this.targetProductCart(this.out = true);
         this.savedProducts();
 
-      }  else if (this.cartItem?.find(cartId => cartId === this.itemID)) {
-
-        this.cartItem = this.cartItem?.filter(elem => elem !== this.itemID);
-        this.productOutCart();
+      }  else if ( this.cartItem.find(cartId => cartId === this.itemID)) {
+        this.cartItem = (this.cartItem.filter(elem => elem !== this.itemID));
+        this.targetProductCart(this.out = false);
         this.savedProducts();
 
         } else {
-
-        this.productInCart();
+        this.targetProductCart(this.out = true);
         this.savedProducts();
-
       }
     },
 
@@ -146,25 +150,24 @@ export default {
       localStorage.setItem('cartItem', parsed);
     },
 
-    productInCart() {
-      this.cartItem.push(this.itemID);
+    targetProductCart() {
       this.loading = true;
-      this.buyButton = 'Обрабатывается';
-      setTimeout(() => {
-        this.buyButton = 'В корзине';
-        this.btnInCart = true;
-      }, 2000);
-    },
 
-    productOutCart() {
-      this.loading = true;
-      this.btnInCart = false;
-      this.buyButton = 'Обрабатывается';
-      setTimeout(() => {
-        this.buyButton = 'Купить';
+      if (this.out === false) {
         this.btnInCart = false;
-        this.loading = false;
-      }, 2000);
+        setTimeout(() => {
+          this.buyButton = 'Купить';
+          this.btnInCart = false;
+          this.loading = false;
+        }, 2000);
+      } else  {
+        this.cartItem?.push(this.itemID);
+        this.buyButton = 'Обрабатывается';
+        setTimeout(() => {
+          this.buyButton = 'В корзине';
+          this.btnInCart = true;
+        }, 2000);
+      }
     },
 
     showPopupInfo() {

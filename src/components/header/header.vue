@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
-import VSearchForm from "@/components/SearchForm";
-import burgerBtn from "@/components/burgerBtn";
+import NavBar from "@/components/navBar/navBar";
+import VSearchForm from "@/components/searchForm/searchForm";
+import burgerBtn from "@/components/burgerBtn/burgerBtn";
 import {hideBodyOverflow, showBodyOverflow} from "@/App";
 
 export default {

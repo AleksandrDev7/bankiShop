@@ -18,7 +18,7 @@
 
 <script>
 import {mapActions, mapGetters} from 'vuex';
-import VCatalogItem from "@/components/catalogItem";
+import VCatalogItem from "@/components/catalogItem/catalogItem";
 
 export default {
   name: "VCatalog",

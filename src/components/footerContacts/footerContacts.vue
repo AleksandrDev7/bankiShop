@@ -4,7 +4,7 @@
     <a href="tel:+78125555555">+7 (812) 555-55-55</a>
   </div>
   <div class="contacts-address">
-    <a href="https://yandex.ru/maps/-/CCUkIEctgA">г. Санкт-Петербург, ул. Ефимова, 3</a>
+    <a href="https://yandex.ru/maps/-/CCUkIEctgA" target="_blank">г. Санкт-Петербург, ул. Ефимова, 3</a>
   </div>
 </div>
 </template>
@@ -45,11 +45,11 @@ export default {
   }
 
   &-tel a:before {
-    background: url("../assets/images/phone.svg") no-repeat;
+    background: url("../../../public/images/phone.svg") no-repeat;
   }
 
   &-address a:before {
-    background: url("../assets/images/address.svg") no-repeat;
+    background: url("../../../public/images/address.svg") no-repeat;
   }
 
   &-tel {

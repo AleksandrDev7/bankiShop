@@ -17,7 +17,7 @@
 
 <script>
 
-import carouselItem from "@/components/carouselItem";
+import carouselItem from "@/components/carouselItem/carouselItem";
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
@@ -77,7 +77,7 @@ export default {
     width: 40px;
     height: 40px;
     border:  none;
-    background-image: url("../assets/images/arrow.svg");
+    background-image: url("../../../public/images/arrow.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -85,7 +85,7 @@ export default {
 
     &:hover {
       cursor: pointer;
-      background-image: url("../assets/images/arrow_hover.svg");
+      background-image: url("../../../public/images/arrow_hover.svg");
     }
   }
 

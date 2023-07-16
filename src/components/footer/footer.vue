@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
-import FooterContacts from "@/components/footerContacts";
+import NavBar from "@/components/navBar/navBar";
+import FooterContacts from "@/components/footerContacts/footerContacts";
 
 export default {
   name: "VFooter",
